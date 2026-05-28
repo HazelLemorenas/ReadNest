@@ -205,3 +205,18 @@ export async function updateStreak(): Promise<number> {
   await saveSettings({ streak: newStreak, lastStreakDate: today });
   return newStreak;
 }
+
+export async function updateNote(
+  noteId: string,
+  newText: string,
+): Promise<void> {
+  try {
+    const raw = await AsyncStorage.getItem(KEYS.notes);
+    const all: ReadingNote[] = raw ? JSON.parse(raw) : [];
+    const index = all.findIndex((n) => n.id === noteId);
+    if (index >= 0) {
+      all[index].text = newText;
+      await AsyncStorage.setItem(KEYS.notes, JSON.stringify(all));
+    }
+  } catch {}
+}
