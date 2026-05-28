@@ -4,7 +4,7 @@
     "slug": "ReadNest",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/read-nest-logo.png",
     "scheme": "readnest",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
