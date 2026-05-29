@@ -193,7 +193,6 @@ export default function BookDetailScreen() {
               <Text style={s.lastRead}>Not started yet</Text>
             )}
           </View>
-
           {/* ── Edit / Delete Buttons ── */}
           <View style={s.actionRow}>
             <TouchableOpacity
@@ -215,7 +214,6 @@ export default function BookDetailScreen() {
               <Text style={s.deleteBtnText}>🗑️ Delete</Text>
             </TouchableOpacity>
           </View>
-
           {/* ── Read Button ── */}
           <TouchableOpacity
             style={s.readBtn}
@@ -228,13 +226,11 @@ export default function BookDetailScreen() {
                 : "▶  Start Reading"}
             </Text>
           </TouchableOpacity>
-
           {/* ── Notes ── */}
           <View style={s.notesHeader}>
             <Text style={s.sectionTitle}>My Notes</Text>
             <Text style={s.notesCount}>{notes.length} notes</Text>
           </View>
-
           {notes.length === 0 ? (
             <View style={s.emptyNotes}>
               <Text style={s.emptyNotesEmoji}>📝</Text>
@@ -265,9 +261,7 @@ export default function BookDetailScreen() {
               </TouchableOpacity>
             ))
           )}
-
           <View style={{ height: 40 }} />
-
           {/* ── Edit Modal ── */}
           <Modal
             visible={editModal}
@@ -310,8 +304,7 @@ export default function BookDetailScreen() {
               </View>
             </KeyboardAvoidingView>
           </Modal>
-
-          {/* ── Note Action Modal ── */}
+          ;{/* ── Note Action Modal ── */}
           <Modal
             visible={noteActionModal}
             transparent
@@ -371,8 +364,7 @@ export default function BookDetailScreen() {
               </View>
             </TouchableOpacity>
           </Modal>
-
-          {/* ── Edit Note Modal ── */}
+          ;{/* ── Edit Note Modal ── */}
           <Modal
             visible={editNoteModal}
             transparent
@@ -414,6 +406,7 @@ export default function BookDetailScreen() {
               </View>
             </KeyboardAvoidingView>
           </Modal>
+          ;
         </View>
       </ScrollView>
     </View>
